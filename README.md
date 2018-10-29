@@ -1,1 +1,1 @@
-# [Solutions to capture the Ether challenges](https://capturetheether.com)
+# Solutions to [capture the Ether challenges](https://capturetheether.com)
