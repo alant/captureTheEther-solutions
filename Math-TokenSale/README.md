@@ -1,0 +1,17 @@
+# [Math / Token sale](https://capturetheether.com/challenges/math/token-sale/)
+
+This question boils down to being able to come up with the following knowledge: uint256's maximum is 2**256–1, which is:
+
+115792089237316195423570985008687907853269984665640564039457584007913129639935
+
+Multiplying this with 10**18, take out the last 18 digits:
+
+115792089237316195423570985008687907853269984665640564039457
+
+Add 1, multiple this with 10**18:
+
+115792089237316195423570985008687907853269984665640564039458000000000000000000
+
+Which overflows to 415992086870360064, slightly below half an ether.
+
+115792089237316195423570985008687907853269984665640564039458 and 415992086870360064 are the two key numbers to solve this challenge.
